@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | KIU Campaign</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky">
+        <div class="logo">KIU Campaign</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About KIU</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="goals.html">Campaign Goals</a></li>
+            <li><a href="news.html">News & Events</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle dark/light mode"></button>
+    </nav>
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
+                    <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                    <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span class="error-msg"></span>
+                </div>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+            <div class="map-placeholder">
+                <!-- Map Placeholder -->
+                <img src="" alt="Map Placeholder" />
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com/ndaisenga_timothy" class="social-icon" aria-label="Facebook">
+                    <img src="facebook.svg" alt="Facebook" />
+                </a>
+                <a href="https://x.com/Timothy29789454" class="social-icon" aria-label="Twitter">
+                    <img src="data:image/png;base64,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" alt="Twitter" />
+                </a>
+                <a href="https://instagram.com/ndaisengatimo" class="social-icon" aria-label="Instagram">
+                    <img src="https://cdn2.iconfinder.com/data/icons/social-media-icons-23/800/instagram-512.png" alt="Instagram" />
+                </a>
+                <a href="https://wa.me/256751284988" class="social-icon" aria-label="LinkedIn">
+                    <img src="data:image/png;base64,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">
+                    </a>
+
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Timothy International University. All rights reserved.</p>
+    </footer>
+</body>
+</html>
